@@ -1,25 +1,46 @@
 # Test Vercel
 
-Minimal Next.js test project for validating Vercel deployment setup and behavior.
+Minimal Next.js application used to validate Vercel deployment behavior and framework defaults before adding application code.
 
-## What this repo is for
+## What this project does
 
-- Quick smoke test of Next.js app structure
-- Verify Vercel build, preview, and production deployments
-- Check framework defaults before adding app code
+- Validates Next.js setup and build pipeline
+- Provides a small `/api/test` route for smoke testing
+- Confirms Vercel deploy, preview, and production flows
 
-## Tech stack
+## Tech stack and tools
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+- Next.js 16.2.3
+- React 19.2.4
+- Tailwind CSS 4
+- TypeScript 5
+- ESLint 9
+
+## Repo structure
+
+```
+app/
+  page.tsx
+  layout.tsx
+  globals.css
+  favicon.ico
+  api/
+    test/
+      route.js
+public/
+README.md
+package.json
+tsconfig.json
+next.config.ts
+eslint.config.mjs
+postcss.config.mjs
+tailwind.config.ts
+```
 
 ## Requirements
 
 - Node.js 18+
 - npm or pnpm
-- Vercel account for deployment
 
 ## Setup
 
@@ -30,13 +51,14 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+## Run and verify
+
+- Visit the home page.
+- Call `/api/test` to confirm API route behavior.
+
 ## Deploy
 
-Recommended deploy target is Vercel.
-
-```bash
-vercel
-```
+Deploy as a standard Next.js app on Vercel.
 
 ## License
 
